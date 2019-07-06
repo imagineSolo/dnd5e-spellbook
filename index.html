@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>D&D 5e Spellbook</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <!-- <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg=" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>D&D 5e Spellbook</h1>
+    <div class="column">
+      <div class="row">
+        <form action="">
+          <label for="char-class">Class:</label>
+          <select class="u-full-width" id="class-select">
+            <option value="all-classes">all classes</option>
+            <option value="bard">Bard</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
+            <option value="paladin">Paladin</option>
+            <option value="ranger">Ranger</option>
+            <option value="sorcerer">Sorcerer</option>
+            <option value="warlock">Warlock</option>
+            <option value="wizard">Wizard</option>
+          </select>
+          <label for="spell-level">Spell Level:</label>
+          <select class="u-full-width" id="spell-level-select">
+            <option value="all spells">all spells</option>
+            <option value="Cantrips">Cantrips</option>
+            <option value="1th Level">1th Level</option>
+            <option value="2th Level">2th Level</option>
+            <option value="3th Level">3th Level</option>
+            <option value="4th Level">4th Level</option>
+            <option value="5th Level">5th Level</option>
+            <option value="6th Level">6th Level</option>
+            <option value="7th Level">7th Level</option>
+            <option value="8th Level">8th Level</option>
+            <option value="9th Level">9th Level</option>
+          </select>
+          </select>
+          <label for="school">School of Magic:</label>
+          <select class="u-full-width" id="magic-school-select">
+            <option value="all schools">all schools</option>
+            <option value="Abjuration">Abjuration</option>
+            <option value="Conjuration">Conjuration</option>
+            <option value="Divination">Divination</option>
+            <option value="Enchantment">Enchantment</option>
+            <option value="Evocation">Evocation</option>
+            <option value="Illusion">Illusion</option>
+            <option value="Necromancy">Necromancy</option>
+            <option value="Transmutation">Transmutation</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+    <table class="u-full-width" id='table-results'>
+      <thead>
+        <tr>
+          <th>Spell Name:</th>
+          <th>Level:</th>
+          <th>School:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>.</td>
+          <td>.</td>
+          <td>.</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul id='test-output'></u>
+  </div>
+  <script src="srd.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
