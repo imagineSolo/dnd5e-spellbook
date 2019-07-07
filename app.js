@@ -9,7 +9,7 @@ classSelect.addEventListener('change', (e) => {
 
   srd.getSpells(classSelected)
     .then(data => {
-      ui.showSpells(data);
+      ui.showSpells(classSelected, data);
       console.log(data);
     })
 });

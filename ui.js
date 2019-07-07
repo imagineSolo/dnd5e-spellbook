@@ -3,10 +3,10 @@ class UI {
     this.output = document.querySelector('#test-output');
     // this.table = document.querySelector('table-results');
   }
-  showSpells(data) {
-    if (data === 'all-classes') {
+  showSpells(classSelected, data) {
+    if (classSelected === 'all-classes') {
       this.output.innerHTML = `<li>${data.name}</li>`;
-      console.log(123)
+      console.log(123);
     } else {
       let count = 0;
       for (count = 0; count < `${data.count}`; count++) {
