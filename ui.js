@@ -3,22 +3,31 @@ class UI {
     this.output = document.querySelector('#test-output');
     // this.table = document.querySelector('#table-results');
   }
+
+  sortSpells(key) {
+    return function (a, b) {
+      if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
+      let comparison = a[key].localeCompare(b[key]);
+      return comparison;
+    };
+  }
+
   classSpells(classSelected, data) {
     let i = 0;
     if (classSelected === 'all-classes') {
       for (i = 0; i < `${data.length}`; i++) {
-        let count = data[i].name;
-        this.output.innerHTML += `<li>${count}</li>`;
-        console.log(count);
+        data.sort(ui.sortSpells('level'));
+        let count = data[i];
+        this.output.innerHTML += `<li>${count.name}</li>`;
       }
     } else {
       const dataFiltered = data.filter(function (classname) {
         return classname.class.includes(classSelected);
       });
+      dataFiltered.sort(ui.sortSpells('level'));
       for (i = 0; i < `${dataFiltered.length}`; i++) {
         let count = dataFiltered[i].name;
         this.output.innerHTML += `<li>${count}</li>`;
-        console.log(dataFiltered);
       }
     }
   };
@@ -61,5 +70,5 @@ class UI {
         console.log(dataFiltered);
       }
     }
-  }
+  };
 }
