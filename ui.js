@@ -1,7 +1,7 @@
 class UI {
   constructor() {
     this.output = document.querySelector('#test-output');
-    // this.table = document.querySelector('#table-results');
+    this.table = document.querySelector('#table-results');
   }
 
   sortSpells(key) {
@@ -12,13 +12,22 @@ class UI {
     };
   }
 
+  clearSpells() {
+    this.table.innerHTML = '';
+  }
+
   classSpells(classSelected, data) {
     let i = 0;
     if (classSelected === 'all-classes') {
       for (i = 0; i < `${data.length}`; i++) {
         data.sort(ui.sortSpells('level'));
         let count = data[i];
-        this.output.innerHTML += `<li>${count.name}</li>`;
+        this.table.innerHTML += `
+        <tr>
+        <td>${count.name} </td>
+        <td>${count.level}</td>
+        <td>${count.school}</td>
+        </tr>`;
       }
     } else {
       const dataFiltered = data.filter(function (classname) {
@@ -26,8 +35,13 @@ class UI {
       });
       dataFiltered.sort(ui.sortSpells('level'));
       for (i = 0; i < `${dataFiltered.length}`; i++) {
-        let count = dataFiltered[i].name;
-        this.output.innerHTML += `<li>${count}</li>`;
+        let count = dataFiltered[i];
+        this.table.innerHTML += `
+        <tr>
+        <td>${count.name} </td>
+        <td>${count.level}</td>
+        <td>${count.school}</td>
+        </tr>`;
       }
     }
   };
@@ -36,18 +50,28 @@ class UI {
     let i = 0;
     if (levelSelected === 'all-levels') {
       for (i = 0; i < `${data.length}`; i++) {
-        let count = data[i].name;
-        this.output.innerHTML += `<li>${count}</li>`;
-        console.log(count);
+        data.sort(ui.sortSpells('level'));
+        let count = data[i];
+        this.table.innerHTML += `
+        <tr>
+        <td>${count.name} </td>
+        <td>${count.level}</td>
+        <td>${count.school}</td>
+        </tr>`;
       }
     } else {
       const dataFiltered = data.filter(function (levelname) {
         return levelname.level.includes(levelSelected);
       });
+      dataFiltered.sort(ui.sortSpells('level'));
       for (i = 0; i < `${dataFiltered.length}`; i++) {
-        let count = dataFiltered[i].name;
-        this.output.innerHTML += `<li>${count}</li>`;
-        console.log(dataFiltered);
+        let count = dataFiltered[i];
+        this.table.innerHTML += `
+        <tr>
+        <td>${count.name} </td>
+        <td>${count.level}</td>
+        <td>${count.school}</td>
+        </tr>`;
       }
     }
   };
@@ -56,18 +80,28 @@ class UI {
     let i = 0;
     if (schoolSelected === 'all-schools') {
       for (i = 0; i < `${data.length}`; i++) {
-        let count = data[i].name;
-        this.output.innerHTML += `<li>${count}</li>`;
-        console.log(count);
+        data.sort(ui.sortSpells('level'));
+        let count = data[i];
+        this.table.innerHTML += `
+        <tr>
+        <td>${count.name} </td>
+        <td>${count.level}</td>
+        <td>${count.school}</td>
+        </tr>`;
       }
     } else {
       const dataFiltered = data.filter(function (schoolname) {
         return schoolname.school.includes(schoolSelected);
       });
+      dataFiltered.sort(ui.sortSpells('level'));
       for (i = 0; i < `${dataFiltered.length}`; i++) {
-        let count = dataFiltered[i].name;
-        this.output.innerHTML += `<li>${count}</li>`;
-        console.log(dataFiltered);
+        let count = dataFiltered[i];
+        this.table.innerHTML += `
+        <tr>
+        <td>${count.name} </td>
+        <td>${count.level}</td>
+        <td>${count.school}</td>
+        </tr>`;
       }
     }
   };

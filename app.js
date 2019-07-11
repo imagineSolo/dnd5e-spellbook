@@ -6,9 +6,9 @@ const levelSelect = document.querySelector('#spell-level-select');
 const schoolSelect = document.querySelector('#magic-school-select');
 
 classSelect.addEventListener('change', (e) => {
+  ui.clearSpells();
   const classSelected = e.target.value;
   console.log(classSelected);
-
   srd.getSpells(classSelected)
     .then(data => {
       ui.classSpells(classSelected, data);
@@ -16,6 +16,7 @@ classSelect.addEventListener('change', (e) => {
 });
 
 levelSelect.addEventListener('change', (e) => {
+  ui.clearSpells();
   const levelSelected = e.target.value;
   console.log(levelSelected);
   srd.getSpells(levelSelected)
@@ -25,6 +26,7 @@ levelSelect.addEventListener('change', (e) => {
 });
 
 schoolSelect.addEventListener('change', (e) => {
+  ui.clearSpells();
   const schoolSelected = e.target.value;
   console.log(schoolSelected);
   srd.getSpells(schoolSelected)
