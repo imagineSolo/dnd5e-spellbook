@@ -1,10 +1,8 @@
 const srd = new SRD;
 const ui = new UI;
 
-const classSelect = document.querySelector('#class-select');
-const levelSelect = document.querySelector('#spell-level-select');
-const schoolSelect = document.querySelector('#magic-school-select');
 
+const classSelect = document.querySelector('#class-select');
 classSelect.addEventListener('change', (e) => {
   ui.clearSpells();
   const classSelected = e.target.value;
@@ -12,9 +10,27 @@ classSelect.addEventListener('change', (e) => {
   srd.getSpells(classSelected)
     .then(data => {
       ui.classSpells(classSelected, data);
-    })
+    });
 });
 
+document.getElementById('table-results').addEventListener('click', (e) => {
+  e.preventDefault();
+  if (e.target.className === 'spell-name') {
+    console.log(123);
+    const spellInfo = document.createElement("div");
+    spellInfo.className = 'nine.columns';
+    spellInfo.innerHTML = `
+      Spell Name: @@@;
+      Level: @@@;
+      School: @@@;
+      Components: @@@;
+      Duration: @@@
+    `;
+    document.body.appendChild(spellInfo);
+  }
+});
+
+const levelSelect = document.querySelector('#spell-level-select');
 levelSelect.addEventListener('change', (e) => {
   ui.clearSpells();
   const levelSelected = e.target.value;
@@ -22,9 +38,10 @@ levelSelect.addEventListener('change', (e) => {
   srd.getSpells(levelSelected)
     .then(data => {
       ui.levelSpells(levelSelected, data);
-    })
+    });
 });
 
+const schoolSelect = document.querySelector('#magic-school-select');
 schoolSelect.addEventListener('change', (e) => {
   ui.clearSpells();
   const schoolSelected = e.target.value;
@@ -32,5 +49,5 @@ schoolSelect.addEventListener('change', (e) => {
   srd.getSpells(schoolSelected)
     .then(data => {
       ui.schoolSpells(schoolSelected, data);
-    })
+    });
 });

@@ -4,6 +4,23 @@ class UI {
     this.table = document.querySelector('#table-results');
   }
 
+  // multiFilter(array, filters) {
+  //   console.log(321);
+  //   const filterKeys = Object.keys(filters);
+  //   return array.filter((item) => {
+  //     return filterKeys.every(key => {
+  //       if (!filters[key].length) return true;
+  //       return filters[key].includes(item[key]);
+  //     });
+  //   });
+  // }
+
+  // filterSpells(spells, key) {
+  //   ui.multiFilter(spells, key);
+  //   console.log(123);
+  //   // ...
+  // }
+
   sortSpells(key) {
     return function (a, b) {
       if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
@@ -24,7 +41,7 @@ class UI {
         let count = data[i];
         this.table.innerHTML += `
         <tr>
-        <td>${count.name} </td>
+        <td><a href='#' class='spell-name'>${count.name}</a></td>
         <td>${count.level}</td>
         <td>${count.school}</td>
         </tr>`;
@@ -38,7 +55,7 @@ class UI {
         let count = dataFiltered[i];
         this.table.innerHTML += `
         <tr>
-        <td>${count.name} </td>
+        <td><a href='#' class='spell-name'>${count.name}</a></td>
         <td>${count.level}</td>
         <td>${count.school}</td>
         </tr>`;
@@ -54,7 +71,7 @@ class UI {
         let count = data[i];
         this.table.innerHTML += `
         <tr>
-        <td>${count.name} </td>
+        <td><a href='#' class='spell-name'>${count.name}</a></td>
         <td>${count.level}</td>
         <td>${count.school}</td>
         </tr>`;
@@ -68,7 +85,7 @@ class UI {
         let count = dataFiltered[i];
         this.table.innerHTML += `
         <tr>
-        <td>${count.name} </td>
+        <td><a href='#' class='spell-name'>${count.name}</a></td>
         <td>${count.level}</td>
         <td>${count.school}</td>
         </tr>`;
@@ -84,7 +101,7 @@ class UI {
         let count = data[i];
         this.table.innerHTML += `
         <tr>
-        <td>${count.name} </td>
+        <td><a href='#' class='spell-name'>${count.name}</a></td>
         <td>${count.level}</td>
         <td>${count.school}</td>
         </tr>`;
@@ -98,7 +115,7 @@ class UI {
         let count = dataFiltered[i];
         this.table.innerHTML += `
         <tr>
-        <td>${count.name} </td>
+        <td><a href='#' class='spell-name'>${count.name}</a></td>
         <td>${count.level}</td>
         <td>${count.school}</td>
         </tr>`;

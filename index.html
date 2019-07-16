@@ -22,7 +22,7 @@
         <form action="">
           <label for="char-class" class="u-pull-left three.columns">Class:</label>
           <select class="u-pull-left three.columns" id="class-select">
-            <option value="select" selected>--select--</option>
+            <option value="select" autofocus disabled>--select--</option>
             <option value="all-classes">all classes</option>
             <option value="Bard">Bard</option>
             <option value="Cleric">Cleric</option>
@@ -35,7 +35,7 @@
           </select>
           <label for="spell-level" class="u-pull-left three.columns">Spell Level:</label>
           <select class="u-pull-left three.columns" id="spell-level-select">
-            <option value="select" selected>--select--</option>
+            <option value="select" autofocus disabled>--select--</option>
             <option value="all-levels">all spells</option>
             <option value="Cantrip">Cantrips</option>
             <option value="1st">1st Level</option>
@@ -50,7 +50,7 @@
           </select>
           <label for="school" class="u-pull-left three.columns">School of Magic:</label>
           <select class="u-pull-left three.columns" id="magic-school-select">
-            <option value="select" selected>--select--</option>
+            <option value="select" autofocus disabled>--select--</option>
             <option value="all-schools">all schools</option>
             <option value="Abjuration">Abjuration</option>
             <option value="Conjuration">Conjuration</option>
@@ -76,6 +76,7 @@
       <tbody id='table-results'>
       </tbody>
     </table>
+    <div id="test"></div>
   </div>
   <script src="srd.js"></script>
   <script src="ui.js"></script>
