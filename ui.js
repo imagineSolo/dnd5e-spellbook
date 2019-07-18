@@ -1,6 +1,5 @@
 class UI {
   constructor() {
-    this.output = document.querySelector('#test-output');
     this.table = document.querySelector('#table-results');
   }
 
@@ -15,11 +14,13 @@ class UI {
   //   });
   // }
 
-  // filterSpells(spells, key) {
-  //   ui.multiFilter(spells, key);
-  //   console.log(123);
-  //   // ...
-  // }
+  filterSpells(classSelected, data) {
+    const selected = classSelected;
+    console.log(selected);
+    const selectedOption = data.filter(
+      spell => spell[0].name === selected);
+    return selectedOption;
+  }
 
   sortSpells(key) {
     return function (a, b) {
