@@ -3,17 +3,6 @@ class UI {
     this.table = document.querySelector('#table-results');
   }
 
-  // multiFilter(array, filters) {
-  //   console.log(321);
-  //   const filterKeys = Object.keys(filters);
-  //   return array.filter((item) => {
-  //     return filterKeys.every(key => {
-  //       if (!filters[key].length) return true;
-  //       return filters[key].includes(item[key]);
-  //     });
-  //   });
-  // }
-
   filterSpells(classSelected, data) {
     const selected = classSelected;
     console.log(selected);
@@ -35,7 +24,7 @@ class UI {
   }
 
   classSpells(classSelected, data) {
-    let i = 0;
+    let i = '';
     if (classSelected === 'all-classes') {
       for (i = 0; i < `${data.length}`; i++) {
         data.sort(ui.sortSpells('level'));
@@ -65,7 +54,7 @@ class UI {
   };
 
   levelSpells(levelSelected, data) {
-    let i = 0;
+    let i = '';
     if (levelSelected === 'all-levels') {
       for (i = 0; i < `${data.length}`; i++) {
         data.sort(ui.sortSpells('level'));
@@ -95,7 +84,7 @@ class UI {
   };
 
   schoolSpells(schoolSelected, data) {
-    let i = 0;
+    let i = '';
     if (schoolSelected === 'all-schools') {
       for (i = 0; i < `${data.length}`; i++) {
         data.sort(ui.sortSpells('level'));
@@ -123,4 +112,33 @@ class UI {
       }
     }
   };
+
+  showDesc(e) {
+    if (e.target.className === 'spell-name') {
+      const description = document.getElementById('description');
+      description.classList.remove('hidden');
+      description.classList.add('description');
+      description.innerHTML = `
+        <button class="close">x</button>
+        <div class='box-1'>${json[0].name}</div>
+        <div class='box-2'>Level: ${json[0].level}</div>
+        <div class='box-3'>School: ${json[0].school}</div>
+        <div class='box-4'>Range: ${json[0].range}</div>
+        <div class='box-5'>Components: ${json[0].components}</div>
+        <div class='box-6'>Ritual: ${json[0].ritual}</div>
+        <div class='box-7'>Material: ${json[0].material}</div>
+        <div class='box-8'>Concentration: ${json[0].concentration}</div>
+        <div class='box-9'>Casting time: ${json[0].casting_time}</div>
+        <div class='box-10'>Duration: ${json[0].duration}</div>
+        <div class='box-11'>Description: ${json[0].desc}</div>
+      `;
+    }
+  }
+
+  closeDesc(target) {
+    if (target.className === 'close') {
+      console.log(target.parentElement)
+      target.parentNode.className += 'hidden';
+    }
+  }
 }
