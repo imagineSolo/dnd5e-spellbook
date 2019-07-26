@@ -114,31 +114,42 @@ class UI {
   };
 
   showDesc(e) {
+    console.log(e.target.text)
+    const spellName = e.target.text;
+    let spellIndex;
+    json.forEach((element, index) => {
+      if (element.name === spellName) {
+        spellIndex = index
+      }
+    });
     if (e.target.className === 'spell-name') {
-      const description = document.getElementById('description');
-      description.classList.remove('hidden');
-      description.classList.add('description');
+      descPlace.appendChild(description);
+      descPlace.classList.remove('hidden');
+      descPlace.classList.add('description');
       description.innerHTML = `
         <button class="close">x</button>
-        <div class='box-1'>${json[0].name}</div>
-        <div class='box-2'>Level: ${json[0].level}</div>
-        <div class='box-3'>School: ${json[0].school}</div>
-        <div class='box-4'>Range: ${json[0].range}</div>
-        <div class='box-5'>Components: ${json[0].components}</div>
-        <div class='box-6'>Ritual: ${json[0].ritual}</div>
-        <div class='box-7'>Material: ${json[0].material}</div>
-        <div class='box-8'>Concentration: ${json[0].concentration}</div>
-        <div class='box-9'>Casting time: ${json[0].casting_time}</div>
-        <div class='box-10'>Duration: ${json[0].duration}</div>
-        <div class='box-11'>Description: ${json[0].desc}</div>
+        <div class='title box-1'>${json[spellIndex].name}</div>
+        <div class='box-2'><span class="title">Level:</span> ${json[spellIndex].level}</div>
+        <div class='box-3'><span class="title">School:</span> ${json[spellIndex].school}</div>
+        <div class='box-4'><span class="title">Range:</span> ${json[spellIndex].range}</div>
+        <div class='box-5'><span class="title">Components:</span> ${json[spellIndex].components}</div>
+        <div class='box-6'><span class="title">Ritual:</span> ${json[spellIndex].ritual}</div>
+        <div class='box-7'><span class="title">Material:</span> ${json[spellIndex].material}</div>
+        <div class='box-8'><span class="title">Concentration:</span> ${json[spellIndex].concentration}</div>
+        <div class='box-9'><span class="title">Casting time:</span> ${json[spellIndex].casting_time}</div>
+        <div class='box-10'><span class="title">Duration:</span> ${json[spellIndex].duration}</div>
+        <div class='box-11'><span class="title">Description:</span> ${json[spellIndex].desc}</div>
       `;
+      container.classList.add('transparent');
     }
   }
 
   closeDesc(target) {
     if (target.className === 'close') {
-      console.log(target.parentElement)
-      target.parentNode.className += 'hidden';
+      descPlace.removeChild(description);
+      descPlace.classList.add('hidden');
+      descPlace.classList.remove('description');
+      container.classList.remove('transparent');
     }
   }
 }
