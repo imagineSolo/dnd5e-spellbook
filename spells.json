@@ -38,7 +38,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Conjuration",
     "class": "Sorcerer, Wizard"
   },
@@ -559,7 +559,7 @@
     "duration": "1 round",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Abjuration",
     "class": "Bard, Sorcerer, Warlock, Wizard"
   },
@@ -686,7 +686,7 @@
     "duration": "1 round",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Sorcerer, Warlock, Wizard"
   },
@@ -815,7 +815,7 @@
     "duration": "1 round",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Necromancy",
     "class": "Sorcerer, Warlock, Wizard"
   },
@@ -1268,7 +1268,7 @@
     "duration": "Instantaneous/1 hour",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Druid, Sorcerer, Wizard"
   },
@@ -1359,7 +1359,7 @@
     "duration": "Up to 1 minute",
     "concentration": "yes",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Conjuration",
     "class": "Druid, Sorcerer, Warlock, Wizard"
   },
@@ -1484,7 +1484,7 @@
     "duration": "Up to 1 minute",
     "concentration": "yes",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Bard, Sorcerer, Wizard"
   },
@@ -1896,7 +1896,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Druid"
   },
@@ -1970,7 +1970,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Warlock"
   },
@@ -2364,7 +2364,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Sorcerer, Wizard"
   },
@@ -2591,7 +2591,7 @@
     "duration": "Up to 1 minute",
     "concentration": "yes",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Enchantment",
     "class": "Bard, Sorcerer, Warlock, Wizard"
   },
@@ -2605,7 +2605,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Druid, Sorcerer, Warlock, Wizard"
   },
@@ -2820,7 +2820,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Sorcerer, Warlock, Wizard"
   },
@@ -2866,7 +2866,7 @@
     "duration": "Up to 1 minute",
     "concentration": "yes",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Divination",
     "class": "Cleric, Druid"
   },
@@ -2895,7 +2895,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Druid, Sorcerer, Wizard"
   },
@@ -3538,7 +3538,7 @@
     "duration": "1 hour",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Bard, Cleric, Sorcerer, Wizard"
   },
@@ -3585,7 +3585,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Sorcerer, Warlock, Wizard"
   },
@@ -3691,7 +3691,7 @@
     "duration": "1 minute",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Conjuration",
     "class": "Bard, Sorcerer, Warlock, Wizard"
   },
@@ -3766,7 +3766,7 @@
     "duration": "1 minute",
     "concentration": "no",
     "casting_time": "1 bonus action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Druid, Warlock"
   },
@@ -3954,7 +3954,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 minute",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Cleric, Bard, Druid, Sorcerer, Wizard"
   },
@@ -3969,7 +3969,7 @@
     "duration": "1 round",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Bard, Sorcerer, Wizard"
   },
@@ -4012,7 +4012,7 @@
     "duration": "1 minute",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Illusion",
     "class": "Bard, Sorcerer, Warlock, Wizard"
   },
@@ -4105,7 +4105,7 @@
     "duration": "Instantaneous/1 hour",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Druid, Sorcerer, Wizard"
   },
@@ -4450,7 +4450,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Conjuration",
     "class": "Sorcerer, Warlock, Wizard"
   },
@@ -4538,7 +4538,7 @@
     "duration": "1 hour",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Bard, Sorcerer, Warlock, Wizard"
   },
@@ -4594,7 +4594,7 @@
     "duration": "10 minutes",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Conjuration",
     "class": "Druid"
   },
@@ -4758,7 +4758,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Sorcerer, Wizard"
   },
@@ -4832,7 +4832,7 @@
     "duration": "Up to 1 minute",
     "concentration": "yes",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Abjuration",
     "class": "Cleric, Druid"
   },
@@ -4907,7 +4907,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Cleric"
   },
@@ -5053,7 +5053,7 @@
     "duration": "Instantaneous/1 hour",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Druid, Sorcerer, Wizard"
   },
@@ -5131,7 +5131,7 @@
     "duration": "1 minute",
     "concentration": "no",
     "casting_time": "1 bonus action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Druid"
   },
@@ -5145,7 +5145,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Sorcerer, Wizard"
   },
@@ -5288,7 +5288,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Necromancy",
     "class": "Cleric"
   },
@@ -5575,7 +5575,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Conjuration",
     "class": "Sorcerer, Warlock, Wizard"
   },
@@ -5696,7 +5696,7 @@
     "duration": "1 minute",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Cleric"
   },
@@ -5711,7 +5711,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Transmutation",
     "class": "Druid"
   },
@@ -5739,7 +5739,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Evocation",
     "class": "Bard, Druid, Sorcerer, Warlock, Wizard"
   },
@@ -5922,7 +5922,7 @@
     "duration": "Up to 1 round",
     "concentration": "yes",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Divination",
     "class": "Bard, Sorcerer, Warlock, Wizard"
   },
@@ -5980,7 +5980,7 @@
     "duration": "Instantaneous",
     "concentration": "no",
     "casting_time": "1 action",
-    "level": "0-level (Cantrip)",
+    "level": "0 (Cantrip)",
     "school": "Enchantment",
     "class": "Bard"
   },

@@ -1,6 +1,11 @@
 const ui = new UI;
 
-let json = '';
+let json = [];
+
+let classSelected = '';
+let levelSelected = '';
+let schoolSelected = '';
+
 const descPlace = document.getElementById('desc-place');
 const description = document.createElement('div');
 const container = document.querySelector('.container');
@@ -16,11 +21,13 @@ const classSelect = document.querySelector('#class-select');
 
 classSelect.addEventListener('change', (e) => {
   ui.clearSpells();
-  const classSelected = e.target.value;
-  ui.classSpells(classSelected, json)
-    .then(classSelected, data => {
-      ui.filterSpells(classSelected, data);
-    });
+  const selectedClass = e.target.value;
+  if (selectedClass !== 'all-classes') {
+    classSelected = selectedClass
+  } else {
+    classSelected = ''
+  }
+  ui.filterBySelectedOptions('class');
 });
 
 
@@ -28,22 +35,26 @@ const levelSelect = document.querySelector('#spell-level-select');
 
 levelSelect.addEventListener('change', (e) => {
   ui.clearSpells();
-  const levelSelected = e.target.value;
-  ui.levelSpells(levelSelected, json)
-    .then(levelSelected, data => {
-      ui.filterSpells(levelSelected, data);
-    });
+  const selectedLevel = e.target.value;
+  if (selectedLevel !== 'all-levels') {
+    levelSelected = selectedLevel
+  } else {
+    levelSelected = ''
+  }
+  ui.filterBySelectedOptions('level')
 });
 
 const schoolSelect = document.querySelector('#magic-school-select');
 
 schoolSelect.addEventListener('change', (e) => {
   ui.clearSpells();
-  const schoolSelected = e.target.value;
-  ui.schoolSpells(schoolSelected, json)
-    .then(schoolSelected, data => {
-      ui.filterSpells(schoolSelected, data);
-    });
+  const selectedSchool = e.target.value;
+  if (selectedSchool !== 'all-schools') {
+    schoolSelected = selectedSchool
+  } else {
+    schoolSelected = ''
+  }
+  ui.filterBySelectedOptions('school')
 });
 
 

@@ -1,36 +1,10 @@
-/*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
-
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
-
-
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
   width: 100%;
   max-width: 960px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -213,14 +187,16 @@ html {
 }
 
 body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font-size: 1.5em;
-  /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
 }
-
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -395,7 +371,6 @@ textarea,
 select {
   height: 38px;
   padding: 6px 10px;
-  /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
@@ -403,7 +378,6 @@ select {
   box-sizing: border-box;
 }
 
-/* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -587,6 +561,15 @@ hr {
 
 /* Classes
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* height: 1rem; */
+}
 
 .hidden {
   display: none;
@@ -594,19 +577,25 @@ hr {
 
 .description {
   position: fixed;
-  max-height: 90vh;
-  width: 50vw;
+  max-height: 93vh;
+  min-width: 50vw;
   top: 50%;
   left: 50%;
   background-color: #fff;
-  padding: 20px;
-  margin: 10px;
+  padding: 15px;
+  margin: 5px;
   transform: translate(-50%, -50%);
   border: 1px solid black;
   z-index: 2;
   -webkit-box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.spell-desc p {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
 }
 
 .transparent {
@@ -638,6 +627,7 @@ hr {
   text-align: center;
 }
 
+
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -659,7 +649,6 @@ near the relevant code. For example, if you wanted to change the styles for butt
 on small devices, paste the mobile query code up in the buttons section and style it
 there.
 */
-
 
 /* Larger than mobile */
 @media (min-width: 400px) {}

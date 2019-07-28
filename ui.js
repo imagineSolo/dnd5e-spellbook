@@ -3,14 +3,6 @@ class UI {
     this.table = document.querySelector('#table-results');
   }
 
-  filterSpells(classSelected, data) {
-    const selected = classSelected;
-    console.log(selected);
-    const selectedOption = data.filter(
-      spell => spell[0].name === selected);
-    return selectedOption;
-  }
-
   sortSpells(key) {
     return function (a, b) {
       if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
@@ -23,95 +15,50 @@ class UI {
     this.table.innerHTML = '';
   }
 
-  classSpells(classSelected, data) {
-    let i = '';
-    if (classSelected === 'all-classes') {
-      for (i = 0; i < `${data.length}`; i++) {
-        data.sort(ui.sortSpells('level'));
-        let count = data[i];
-        this.table.innerHTML += `
-        <tr>
-        <td><a href='#' class='spell-name'>${count.name}</a></td>
-        <td>${count.level}</td>
-        <td>${count.school}</td>
-        </tr>`;
-      }
-    } else {
-      const dataFiltered = data.filter(function (classname) {
-        return classname.class.includes(classSelected);
-      });
-      dataFiltered.sort(ui.sortSpells('level'));
-      for (i = 0; i < `${dataFiltered.length}`; i++) {
-        let count = dataFiltered[i];
-        this.table.innerHTML += `
-        <tr>
-        <td><a href='#' class='spell-name'>${count.name}</a></td>
-        <td>${count.level}</td>
-        <td>${count.school}</td>
-        </tr>`;
-      }
-    }
-  };
+  filterBySelectedOptions(filterOptionSelected) {
+    let filteredData = [];
+    filteredData = this.filterByClass(json);
+    filteredData = this.filterByLevel(filteredData);
+    filteredData = this.filterBySchool(filteredData);
+    filteredData.sort(this.sortSpells('level'));
+    this.createHtml(filterOptionSelected, filteredData);
+    console.log(filteredData);
+  }
 
-  levelSpells(levelSelected, data) {
-    let i = '';
-    if (levelSelected === 'all-levels') {
-      for (i = 0; i < `${data.length}`; i++) {
-        data.sort(ui.sortSpells('level'));
-        let count = data[i];
-        this.table.innerHTML += `
-        <tr>
-        <td><a href='#' class='spell-name'>${count.name}</a></td>
-        <td>${count.level}</td>
-        <td>${count.school}</td>
-        </tr>`;
-      }
+  filterByClass(data) {
+    if (classSelected !== '') {
+      return data.filter(el => el.class.includes(classSelected))
     } else {
-      const dataFiltered = data.filter(function (levelname) {
-        return levelname.level.includes(levelSelected);
-      });
-      dataFiltered.sort(ui.sortSpells('level'));
-      for (i = 0; i < `${dataFiltered.length}`; i++) {
-        let count = dataFiltered[i];
-        this.table.innerHTML += `
-        <tr>
-        <td><a href='#' class='spell-name'>${count.name}</a></td>
-        <td>${count.level}</td>
-        <td>${count.school}</td>
-        </tr>`;
-      }
+      return data
     }
-  };
+  }
 
-  schoolSpells(schoolSelected, data) {
-    let i = '';
-    if (schoolSelected === 'all-schools') {
-      for (i = 0; i < `${data.length}`; i++) {
-        data.sort(ui.sortSpells('level'));
-        let count = data[i];
-        this.table.innerHTML += `
-        <tr>
-        <td><a href='#' class='spell-name'>${count.name}</a></td>
-        <td>${count.level}</td>
-        <td>${count.school}</td>
-        </tr>`;
-      }
+  filterByLevel(data) {
+    if (levelSelected !== '') {
+      return data.filter(el => el.level.includes(levelSelected))
     } else {
-      const dataFiltered = data.filter(function (schoolname) {
-        return schoolname.school.includes(schoolSelected);
-      });
-      dataFiltered.sort(ui.sortSpells('level'));
-      for (i = 0; i < `${dataFiltered.length}`; i++) {
-        let count = dataFiltered[i];
-        this.table.innerHTML += `
-        <tr>
-        <td><a href='#' class='spell-name'>${count.name}</a></td>
-        <td>${count.level}</td>
-        <td>${count.school}</td>
-        </tr>`;
-      }
+      return data
     }
-  };
+  }
+
+  filterBySchool(data) {
+    if (schoolSelected !== '') {
+      return data.filter(el => el.school === schoolSelected)
+    } else {
+      return data
+    }
+  }
+
+  createHtml(filterOptionSelected, filteredSchools) {
+    let output = '';
+    filteredSchools.map(el => output += `
+    <tr>
+    <td><a href='#' class='spell-name'>${el.name}</a></td>
+    <td>${el.level}</td>
+    <td>${el.school}</td>
+    </tr>`);
+    this.table.innerHTML = output;
+  }
 
   showDesc(e) {
     console.log(e.target.text)
@@ -138,7 +85,7 @@ class UI {
         <div class='box-8'><span class="title">Concentration:</span> ${json[spellIndex].concentration}</div>
         <div class='box-9'><span class="title">Casting time:</span> ${json[spellIndex].casting_time}</div>
         <div class='box-10'><span class="title">Duration:</span> ${json[spellIndex].duration}</div>
-        <div class='box-11'><span class="title">Description:</span> ${json[spellIndex].desc}</div>
+        <div class='box-11'><span class="title">Description:</span> <span class="spell-desc">${json[spellIndex].desc}</span></div>
       `;
       container.classList.add('transparent');
     }
