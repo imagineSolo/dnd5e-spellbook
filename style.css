@@ -536,6 +536,10 @@ form {
   box-sizing: border-box;
 }
 
+.u-full-width a {
+  text-decoration: none;
+}
+
 .u-max-full-width {
   max-width: 100%;
   box-sizing: border-box;
