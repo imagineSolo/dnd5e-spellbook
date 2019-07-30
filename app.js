@@ -6,9 +6,9 @@ let classSelected = '';
 let levelSelected = '';
 let schoolSelected = '';
 
+const container = document.querySelector('.container');
 const descPlace = document.getElementById('desc-place');
 const description = document.createElement('div');
-const container = document.querySelector('.container');
 
 (async function getSpells() {
   const dataResponse = await fetch('spells.json');
@@ -29,7 +29,6 @@ classSelect.addEventListener('change', (e) => {
   }
   ui.filterBySelectedOptions('class');
 });
-
 
 const levelSelect = document.querySelector('#spell-level-select');
 

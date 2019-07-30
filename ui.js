@@ -22,7 +22,6 @@ class UI {
     filteredData = this.filterBySchool(filteredData);
     filteredData.sort(this.sortSpells('level'));
     this.createHtml(filterOptionSelected, filteredData);
-    console.log(filteredData);
   }
 
   filterByClass(data) {
@@ -49,9 +48,9 @@ class UI {
     }
   }
 
-  createHtml(filterOptionSelected, filteredSchools) {
+  createHtml(filterOptionSelected, filteredData) {
     let output = '';
-    filteredSchools.map(el => output += `
+    filteredData.map(el => output += `
     <tr>
     <td><a href='#' class='spell-name'>${el.name}</a></td>
     <td>${el.level}</td>
@@ -61,12 +60,11 @@ class UI {
   }
 
   showDesc(e) {
-    console.log(e.target.text)
     const spellName = e.target.text;
     let spellIndex;
     json.forEach((element, index) => {
       if (element.name === spellName) {
-        spellIndex = index
+        spellIndex = index;
       }
     });
     if (e.target.className === 'spell-name') {

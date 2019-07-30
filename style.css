@@ -582,7 +582,7 @@ hr {
 .description {
   position: fixed;
   max-height: 93vh;
-  min-width: 50vw;
+  min-width: 60vw;
   top: 50%;
   left: 50%;
   background-color: #fff;
@@ -594,6 +594,7 @@ hr {
   -webkit-box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
 }
 
 .spell-desc p {
@@ -614,11 +615,11 @@ hr {
   user-select: none;
 }
 
-.close {
+div#desc-place button.close {
   position: absolute;
-  top: 2vh;
-  right: 2vh;
-  width: auto;
+  top: 1vh;
+  right: 1vh;
+  width: 0.5vh;
   height: auto;
 }
 
