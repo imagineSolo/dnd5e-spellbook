@@ -7,17 +7,20 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <div class="container">
+  <header class="header">
+    <img src="img/logo.jpg" alt="D&D_logo">
     <h1>D&D 5e Spellbook</h1>
+  </header>
+  <div class="container">
     <div class="column">
       <div class="row">
-        <form action="">
-          <label for="char-class" class="u-pull-left three.columns">Class:</label>
-          <select class="u-pull-left three.columns" id="class-select">
+        <form class="twelve columns" action="">
+          <label for="char-class" class="u-pull-left twelve columns">Class:</label>
+          <select class="u-pull-left twelve columns" id="class-select">
             <option value="select" selected disabled>--select--</option>
             <option value="all-classes">all classes</option>
             <option value="Bard">Bard</option>
@@ -29,8 +32,8 @@
             <option value="Warlock">Warlock</option>
             <option value="Wizard">Wizard</option>
           </select>
-          <label for="spell-level" class="u-pull-left three.columns">Spell Level:</label>
-          <select class="u-pull-left three.columns" id="spell-level-select">
+          <label for="spell-level" class="u-pull-left twelve columns">Spell Level:</label>
+          <select class="u-pull-left twelve columns" id="spell-level-select">
             <option value="select" selected disabled>--select--</option>
             <option value="all-levels">all spells</option>
             <option value="Cantrip">Cantrips</option>
@@ -44,8 +47,8 @@
             <option value="8th">8th Level</option>
             <option value="9th">9th Level</option>
           </select>
-          <label for="school" class="u-pull-left three.columns">School of Magic:</label>
-          <select class="u-pull-left three.columns" id="magic-school-select">
+          <label for="school" class="u-pull-left twelve columns">School of Magic:</label>
+          <select class="u-pull-left twelve columns" id="magic-school-select">
             <option value="select" selected disabled>--select--</option>
             <option value="all-schools">all schools</option>
             <option value="Abjuration">Abjuration</option>
